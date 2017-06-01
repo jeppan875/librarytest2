@@ -77,13 +77,19 @@ public class BooksTest {
         BookOperation bookOperation = new BookOperation();
         bookOperation.postNewBook();
         
-        int id = new ResponseOperation().getResponse(BASE_URL).jsonPath().getInt("books.book[-1].id");  
+        int bookId = new ResponseOperation().getResponse(BASE_URL).jsonPath().getInt("books.book[-1].id");
         
-        Book book = bookOperation.getBook(id);
-        String descriptionBefore = bookOperation.getBook(id).getDescription();
+        String authorUrl ="http://localhost:8080/librarytest-rest/authors/";
+        int authorId = new ResponseOperation().getResponse(authorUrl).jsonPath().getInt("authors.author[-1].id");
+        AuthorOperation authorOperation = new AuthorOperation();
+        
+        Book book = bookOperation.getBook(bookId);
+        String descriptionBefore = bookOperation.getBook(bookId).getDescription();
         book.setDescription("dgfgd");
-        book.setAuthor(book.getAuthor());
+        book.setAuthor(authorOperation.getAuthor(authorId));
         Container singleBook = new Container(book);
+        
+
                  
         Response putResponse = new ResponseOperation().putResponse(BASE_URL, singleBook);
         assertEquals("should return status code 200",200, putResponse.getStatusCode());

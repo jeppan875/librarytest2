@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="4" failures="1" name="se.nackademin.librarytest.SelenideTest" time="109.394" errors="0" skipped="3">
+<testsuite tests="4" failures="1" name="se.nackademin.librarytest.SelenideTest" time="299.508" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="/usr/lib/jvm/java-8-oracle/jre/lib/i386"/>
@@ -61,15 +61,13 @@
     <property name="sun.desktop" value="gnome"/>
     <property name="sun.cpu.isalist" value=""/>
   </properties>
-  <testcase classname="se.nackademin.librarytest.SelenideTest" name="borrowAndReturnBookTest" time="0">
-    <skipped/>
-  </testcase>
-  <testcase classname="se.nackademin.librarytest.SelenideTest" name="createNewBookTest" time="109.269">
+  <testcase classname="se.nackademin.librarytest.SelenideTest" name="borrowAndReturnBookTest" time="89.797"/>
+  <testcase classname="se.nackademin.librarytest.SelenideTest" name="createNewBookTest" time="85.456">
     <failure message="Element not found {.v-grid-tablewrapper}
 Expected: exist" type="Element not found {.v-grid-tablewrapper}
 Expected">Element not found {.v-grid-tablewrapper}
 Expected: exist
-Screenshot: file:/home/jesper/git/librarytest/selenidetest/build/reports/tests/1496155442712.2.png
+Screenshot: file:/home/jesper/git/librarytest/selenidetest/build/reports/tests/1496227834023.2.png
 Timeout: 4 s.
 Caused by: NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;.v-grid-tablewrapper&quot;}
 	at com.codeborne.selenide.impl.WebElementSource.createElementNotFoundError(WebElementSource.java:31)
@@ -81,7 +79,7 @@ Caused by: NoSuchElementException: no such element: Unable to locate element: {&
 	at com.codeborne.selenide.commands.Commands.execute(Commands.java:136)
 	at com.codeborne.selenide.impl.SelenideElementProxy.dispatchAndRetry(SelenideElementProxy.java:82)
 	at com.codeborne.selenide.impl.SelenideElementProxy.invoke(SelenideElementProxy.java:58)
-	at com.sun.proxy.$Proxy8.should(Unknown Source)
+	at com.sun.proxy.$Proxy7.should(Unknown Source)
 	at com.codeborne.selenide.impl.ElementFinder.createElementNotFoundError(ElementFinder.java:76)
 	at com.codeborne.selenide.impl.WebElementSource.checkCondition(WebElementSource.java:59)
 	at com.codeborne.selenide.commands.Should.should(Should.java:35)
@@ -90,13 +88,13 @@ Caused by: NoSuchElementException: no such element: Unable to locate element: {&
 	at com.codeborne.selenide.commands.Commands.execute(Commands.java:136)
 	at com.codeborne.selenide.impl.SelenideElementProxy.dispatchAndRetry(SelenideElementProxy.java:82)
 	at com.codeborne.selenide.impl.SelenideElementProxy.invoke(SelenideElementProxy.java:58)
-	at com.sun.proxy.$Proxy8.should(Unknown Source)
+	at com.sun.proxy.$Proxy7.should(Unknown Source)
 	at com.codeborne.selenide.impl.ElementFinder.createElementNotFoundError(ElementFinder.java:76)
 	at com.codeborne.selenide.impl.SelenideElementProxy.dispatchAndRetry(SelenideElementProxy.java:107)
 	at com.codeborne.selenide.impl.SelenideElementProxy.invoke(SelenideElementProxy.java:58)
-	at com.sun.proxy.$Proxy8.getText(Unknown Source)
+	at com.sun.proxy.$Proxy7.getText(Unknown Source)
 	at se.nackademin.librarytest.helpers.Table.getCellValue(Table.java:28)
-	at se.nackademin.librarytest.helpers.BookHelper.confirmBookExist(BookHelper.java:145)
+	at se.nackademin.librarytest.helpers.BookHelper.confirmBookExist(BookHelper.java:146)
 	at se.nackademin.librarytest.SelenideTest.createNewBookTest(SelenideTest.java:51)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
@@ -132,13 +130,13 @@ Caused by: NoSuchElementException: no such element: Unable to locate element: {&
 Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;.v-grid-tablewrapper&quot;}
   (Session info: chrome=58.0.3029.81)
   (Driver info: chromedriver=2.29.461599 (8cfe70b3bca63aec509c39bf48c384e7eba3372b),platform=Linux 4.4.0-31-generic x86) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 39 milliseconds
+Command duration or timeout: 27 milliseconds
 For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: &apos;2.53.0&apos;, revision: &apos;35ae25b1534ae328c771e0856c93e187490ca824&apos;, time: &apos;2016-03-15 10:43:46&apos;
 System info: host: &apos;jesper-VirtualBox&apos;, ip: &apos;127.0.1.1&apos;, os.name: &apos;Linux&apos;, os.arch: &apos;i386&apos;, os.version: &apos;4.4.0-31-generic&apos;, java.version: &apos;1.8.0_121&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.29.461599 (8cfe70b3bca63aec509c39bf48c384e7eba3372b), userDataDir=/tmp/.org.chromium.Chromium.IevESk}, takesHeapSnapshot=true, pageLoadStrategy=none, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=58.0.3029.81, platform=LINUX, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
-Session ID: 5926e7f0a49ecc2614b152bafbefdd8f
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.29.461599 (8cfe70b3bca63aec509c39bf48c384e7eba3372b), userDataDir=/tmp/.org.chromium.Chromium.JAx7zK}, takesHeapSnapshot=true, pageLoadStrategy=none, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=58.0.3029.81, platform=LINUX, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
+Session ID: 26054418c96e6baccded8c2348660400
 *** Element info: {Using=css selector, value=.v-grid-tablewrapper}
 	at sun.reflect.GeneratedConstructorAccessor11.newInstance(Unknown Source)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -155,118 +153,104 @@ Session ID: 5926e7f0a49ecc2614b152bafbefdd8f
 	at com.codeborne.selenide.impl.WebElementSource.checkCondition(WebElementSource.java:44)
 	... 54 more
 </failure>
-    <system-err>Starting ChromeDriver 2.29.461599 (8cfe70b3bca63aec509c39bf48c384e7eba3372b) on port 14072
-Only local connections are allowed.
-May 30, 2017 4:42:35 PM com.codeborne.selenide.webdriver.WebDriverFactory createWebDriver
-INFO: BrowserName=chrome Version=58.0.3029.81 Platform=LINUX
-May 30, 2017 4:42:35 PM com.codeborne.selenide.webdriver.WebDriverFactory createWebDriver
-INFO: Selenide v. 3.5.1
-May 30, 2017 4:42:35 PM com.codeborne.selenide.webdriver.WebDriverFactory createWebDriver
-INFO: Selenium WebDriver v. 2.53.0 build time: 2016-03-15 10:43:46
-May 30, 2017 4:42:35 PM com.codeborne.selenide.impl.WebDriverThreadLocalContainer createDriver
-INFO: Create webdriver in current thread 1: ChromeDriver -&gt; ChromeDriver: chrome on LINUX (5926e7f0a49ecc2614b152bafbefdd8f)
-May 30, 2017 4:42:37 PM se.nackademin.librarytest.pages.PageBase clickButton
+    <system-err>May 31, 2017 12:49:08 PM se.nackademin.librarytest.pages.PageBase clickButton
 INFO: Clicking sign in
-May 30, 2017 4:42:39 PM se.nackademin.librarytest.pages.PageBase setTextFieldValue
+May 31, 2017 12:49:10 PM se.nackademin.librarytest.pages.PageBase setTextFieldValue
 INFO: Setting user field  to admin
-May 30, 2017 4:42:41 PM se.nackademin.librarytest.pages.PageBase setTextFieldValue
+May 31, 2017 12:49:11 PM se.nackademin.librarytest.pages.PageBase setTextFieldValue
 INFO: Setting password field  to 1234567890
-May 30, 2017 4:42:42 PM se.nackademin.librarytest.pages.PageBase clickButton
+May 31, 2017 12:49:13 PM se.nackademin.librarytest.pages.PageBase clickButton
 INFO: Clicking login
-May 30, 2017 4:42:43 PM se.nackademin.librarytest.pages.PageBase clickButton
+May 31, 2017 12:49:14 PM se.nackademin.librarytest.pages.PageBase clickButton
 INFO: Clicking add book
-May 30, 2017 4:42:47 PM se.nackademin.librarytest.pages.PageBase setTextFieldValue
-INFO: Setting title to f679ff4a-2161-442c-8734-2bc6abf40d59
-May 30, 2017 4:42:49 PM se.nackademin.librarytest.pages.PageBase setTextFieldValue
-INFO: Setting description to 4d5ee21a-8647-4449-b675-3a713494379d
-May 30, 2017 4:42:51 PM se.nackademin.librarytest.pages.PageBase setTextFieldValue
+May 31, 2017 12:49:16 PM se.nackademin.librarytest.pages.PageBase setTextFieldValue
+INFO: Setting title to d81440c9-32f0-4138-86ae-abd0172acc02
+May 31, 2017 12:49:18 PM se.nackademin.librarytest.pages.PageBase setTextFieldValue
+INFO: Setting description to 6eb3d32d-0738-4a21-a009-25dc9f533568
+May 31, 2017 12:49:19 PM se.nackademin.librarytest.pages.PageBase setTextFieldValue
 INFO: Setting numberOfPagesField to 500
-May 30, 2017 4:42:52 PM se.nackademin.librarytest.pages.PageBase setTextFieldValue
+May 31, 2017 12:49:20 PM se.nackademin.librarytest.pages.PageBase setTextFieldValue
 INFO: Setting isbn to 0-575-01587-X
-May 30, 2017 4:42:53 PM se.nackademin.librarytest.pages.PageBase setTextFieldValue
+May 31, 2017 12:49:22 PM se.nackademin.librarytest.pages.PageBase setTextFieldValue
 INFO: Setting numberInInventoryField to 55
-May 30, 2017 4:42:55 PM se.nackademin.librarytest.pages.PageBase setTextFieldValue
+May 31, 2017 12:49:23 PM se.nackademin.librarytest.pages.PageBase setTextFieldValue
 INFO: Setting datePublished to 1999-10-15
-May 30, 2017 4:42:56 PM se.nackademin.librarytest.pages.PageBase clickButton
+May 31, 2017 12:49:25 PM se.nackademin.librarytest.pages.PageBase clickButton
 INFO: Clicking add book button
-May 30, 2017 4:42:58 PM se.nackademin.librarytest.pages.PageBase clickButton
+May 31, 2017 12:49:27 PM se.nackademin.librarytest.pages.PageBase clickButton
 INFO: Clicking browse books
-May 30, 2017 4:43:00 PM se.nackademin.librarytest.pages.PageBase setTextFieldValue
-INFO: Setting title to f679ff4a-2161-442c-8734-2bc6abf40d59
-May 30, 2017 4:43:01 PM se.nackademin.librarytest.pages.PageBase clickButton
+May 31, 2017 12:49:28 PM se.nackademin.librarytest.pages.PageBase setTextFieldValue
+INFO: Setting title to d81440c9-32f0-4138-86ae-abd0172acc02
+May 31, 2017 12:49:30 PM se.nackademin.librarytest.pages.PageBase clickButton
 INFO: Clicking search book button
-May 30, 2017 4:43:05 PM se.nackademin.librarytest.pages.PageBase getValue
-INFO: Return title: f679ff4a-2161-442c-8734-2bc6abf40d59
-May 30, 2017 4:43:06 PM se.nackademin.librarytest.pages.PageBase getValue
+May 31, 2017 12:49:33 PM se.nackademin.librarytest.pages.PageBase getValue
+INFO: Return title: d81440c9-32f0-4138-86ae-abd0172acc02
+May 31, 2017 12:49:34 PM se.nackademin.librarytest.pages.PageBase getValue
 INFO: Return author: Robert A. Heinlein
-May 30, 2017 4:43:07 PM se.nackademin.librarytest.pages.PageBase getValue
-INFO: Return description: 4d5ee21a-8647-4449-b675-3a713494379d
-May 30, 2017 4:43:08 PM se.nackademin.librarytest.pages.PageBase getValue
+May 31, 2017 12:49:35 PM se.nackademin.librarytest.pages.PageBase getValue
+INFO: Return description: 6eb3d32d-0738-4a21-a009-25dc9f533568
+May 31, 2017 12:49:37 PM se.nackademin.librarytest.pages.PageBase getValue
 INFO: Return isbn: 0-575-01587-X
-May 30, 2017 4:43:09 PM se.nackademin.librarytest.pages.PageBase getValue
+May 31, 2017 12:49:38 PM se.nackademin.librarytest.pages.PageBase getValue
 INFO: Return published date: 1999-10-15
-May 30, 2017 4:43:11 PM se.nackademin.librarytest.pages.PageBase getValue
+May 31, 2017 12:49:39 PM se.nackademin.librarytest.pages.PageBase getValue
 INFO: Return copies availible: 55
-May 30, 2017 4:43:12 PM se.nackademin.librarytest.pages.PageBase getValue
+May 31, 2017 12:49:40 PM se.nackademin.librarytest.pages.PageBase getValue
 INFO: Return total copies availible: 55
-May 30, 2017 4:43:13 PM se.nackademin.librarytest.pages.PageBase clickButton
+May 31, 2017 12:49:41 PM se.nackademin.librarytest.pages.PageBase clickButton
 INFO: Clicking browse books
-May 30, 2017 4:43:14 PM se.nackademin.librarytest.pages.PageBase setTextFieldValue
-INFO: Setting title to f679ff4a-2161-442c-8734-2bc6abf40d59
-May 30, 2017 4:43:16 PM se.nackademin.librarytest.pages.PageBase clickButton
+May 31, 2017 12:49:42 PM se.nackademin.librarytest.pages.PageBase setTextFieldValue
+INFO: Setting title to d81440c9-32f0-4138-86ae-abd0172acc02
+May 31, 2017 12:49:44 PM se.nackademin.librarytest.pages.PageBase clickButton
 INFO: Clicking search book button
-May 30, 2017 4:43:18 PM se.nackademin.librarytest.pages.PageBase clickButton
+May 31, 2017 12:49:46 PM se.nackademin.librarytest.pages.PageBase clickButton
 INFO: Clicking edit book
-May 30, 2017 4:43:20 PM se.nackademin.librarytest.pages.PageBase setTextFieldValue
-INFO: Setting title to d250d98c-1365-46ec-a9ca-df77c1c4b04b
-May 30, 2017 4:43:22 PM se.nackademin.librarytest.pages.PageBase setTextFieldValue
-INFO: Setting description to 8f8a4e0b-e08e-408e-be32-1db1f133626a
-May 30, 2017 4:43:24 PM se.nackademin.librarytest.pages.PageBase setTextFieldValue
+May 31, 2017 12:49:49 PM se.nackademin.librarytest.pages.PageBase setTextFieldValue
+INFO: Setting title to 6b67ca0e-239c-4168-aefd-059676898417
+May 31, 2017 12:49:51 PM se.nackademin.librarytest.pages.PageBase setTextFieldValue
+INFO: Setting description to 9ec5e90b-f2d5-4cb0-8e6a-0566b84106f0
+May 31, 2017 12:49:53 PM se.nackademin.librarytest.pages.PageBase setTextFieldValue
 INFO: Setting numberOfPagesField to 400
-May 30, 2017 4:43:25 PM se.nackademin.librarytest.pages.PageBase setTextFieldValue
+May 31, 2017 12:49:54 PM se.nackademin.librarytest.pages.PageBase setTextFieldValue
 INFO: Setting isbn to 9-575-55555-X
-May 30, 2017 4:43:26 PM se.nackademin.librarytest.pages.PageBase setTextFieldValue
+May 31, 2017 12:49:56 PM se.nackademin.librarytest.pages.PageBase setTextFieldValue
 INFO: Setting numberInInventoryField to 65
-May 30, 2017 4:43:28 PM se.nackademin.librarytest.pages.PageBase setTextFieldValue
+May 31, 2017 12:49:57 PM se.nackademin.librarytest.pages.PageBase setTextFieldValue
 INFO: Setting datePublished to 1985-10-15
-May 30, 2017 4:43:29 PM se.nackademin.librarytest.pages.PageBase clickButton
+May 31, 2017 12:49:58 PM se.nackademin.librarytest.pages.PageBase clickButton
 INFO: Clicking save changes
-May 30, 2017 4:43:33 PM se.nackademin.librarytest.pages.PageBase clickButton
+May 31, 2017 12:50:02 PM se.nackademin.librarytest.pages.PageBase clickButton
 INFO: Clicking browse books
-May 30, 2017 4:43:34 PM se.nackademin.librarytest.pages.PageBase setTextFieldValue
-INFO: Setting title to d250d98c-1365-46ec-a9ca-df77c1c4b04b
-May 30, 2017 4:43:36 PM se.nackademin.librarytest.pages.PageBase clickButton
+May 31, 2017 12:50:03 PM se.nackademin.librarytest.pages.PageBase setTextFieldValue
+INFO: Setting title to 6b67ca0e-239c-4168-aefd-059676898417
+May 31, 2017 12:50:05 PM se.nackademin.librarytest.pages.PageBase clickButton
 INFO: Clicking search book button
-May 30, 2017 4:43:39 PM se.nackademin.librarytest.pages.PageBase getValue
-INFO: Return title: d250d98c-1365-46ec-a9ca-df77c1c4b04b
-May 30, 2017 4:43:40 PM se.nackademin.librarytest.pages.PageBase getValue
+May 31, 2017 12:50:09 PM se.nackademin.librarytest.pages.PageBase getValue
+INFO: Return title: 6b67ca0e-239c-4168-aefd-059676898417
+May 31, 2017 12:50:10 PM se.nackademin.librarytest.pages.PageBase getValue
 INFO: Return author: Robert A. Heinlein
-May 30, 2017 4:43:41 PM se.nackademin.librarytest.pages.PageBase getValue
-INFO: Return description: 8f8a4e0b-e08e-408e-be32-1db1f133626a
-May 30, 2017 4:43:42 PM se.nackademin.librarytest.pages.PageBase getValue
+May 31, 2017 12:50:11 PM se.nackademin.librarytest.pages.PageBase getValue
+INFO: Return description: 9ec5e90b-f2d5-4cb0-8e6a-0566b84106f0
+May 31, 2017 12:50:12 PM se.nackademin.librarytest.pages.PageBase getValue
 INFO: Return isbn: 9-575-55555-X
-May 30, 2017 4:43:43 PM se.nackademin.librarytest.pages.PageBase getValue
+May 31, 2017 12:50:13 PM se.nackademin.librarytest.pages.PageBase getValue
 INFO: Return published date: 1985-10-15
-May 30, 2017 4:43:44 PM se.nackademin.librarytest.pages.PageBase getValue
+May 31, 2017 12:50:14 PM se.nackademin.librarytest.pages.PageBase getValue
 INFO: Return copies availible: 65
-May 30, 2017 4:43:45 PM se.nackademin.librarytest.pages.PageBase getValue
+May 31, 2017 12:50:15 PM se.nackademin.librarytest.pages.PageBase getValue
 INFO: Return total copies availible: 65
-May 30, 2017 4:43:46 PM se.nackademin.librarytest.pages.PageBase clickButton
+May 31, 2017 12:50:16 PM se.nackademin.librarytest.pages.PageBase clickButton
 INFO: Clicking delete book
-May 30, 2017 4:43:48 PM se.nackademin.librarytest.pages.PageBase clickButton
+May 31, 2017 12:50:18 PM se.nackademin.librarytest.pages.PageBase clickButton
 INFO: Clicking yes
-May 30, 2017 4:43:49 PM se.nackademin.librarytest.pages.PageBase clickButton
+May 31, 2017 12:50:19 PM se.nackademin.librarytest.pages.PageBase clickButton
 INFO: Clicking browse books
-May 30, 2017 4:43:50 PM se.nackademin.librarytest.pages.PageBase setTextFieldValue
-INFO: Setting title to d250d98c-1365-46ec-a9ca-df77c1c4b04b
-May 30, 2017 4:43:52 PM se.nackademin.librarytest.pages.PageBase clickButton
+May 31, 2017 12:50:21 PM se.nackademin.librarytest.pages.PageBase setTextFieldValue
+INFO: Setting title to 6b67ca0e-239c-4168-aefd-059676898417
+May 31, 2017 12:50:23 PM se.nackademin.librarytest.pages.PageBase clickButton
 INFO: Clicking search book button
 </system-err>
   </testcase>
-  <testcase classname="se.nackademin.librarytest.SelenideTest" name="createNewAuthorTest" time="109.269">
-    <skipped/>
-  </testcase>
-  <testcase classname="se.nackademin.librarytest.SelenideTest" name="createNewUserTest" time="109.269">
-    <skipped/>
-  </testcase>
+  <testcase classname="se.nackademin.librarytest.SelenideTest" name="createNewAuthorTest" time="66.964"/>
+  <testcase classname="se.nackademin.librarytest.SelenideTest" name="createNewUserTest" time="56.922"/>
 </testsuite>

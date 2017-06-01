@@ -48,7 +48,7 @@ public class SelenideTest extends TestBase {
     assertEquals("equals ",editBook.getIsbn(),confirmBook.getIsbn());
     assertEquals("equals ",editBook.getTotalNumberOfCopiesAvailible(),confirmBook.getTotalNumberOfCopiesAvailible()); 
     BookHelper.deleteBook();
-//    assertFalse("", BookHelper.confirmBookExist(editBookTitle));
+
     
     }
 

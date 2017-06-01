@@ -10,6 +10,7 @@ import static com.codeborne.selenide.Selenide.page;
 import static com.codeborne.selenide.Selenide.sleep;
 import java.util.Random;
 import java.util.UUID;
+import org.openqa.selenium.ElementNotVisibleException;
 import org.openqa.selenium.NoSuchElementException;
 import se.nackademin.librarytest.model.Author;
 
@@ -134,19 +135,19 @@ public class BookHelper {
         bookPage.deleteBookButton();
         bookPage.confirmByYesButton();
     }
-
-    public static Boolean confirmBookExist(String title) {
-        try {
-            page(MenuPage.class).navigateToBrowseBooks();
-            BrowseBooksPage browseBooksPage = page(BrowseBooksPage.class);
-            browseBooksPage.setTitleField(title);
-            browseBooksPage.clickSearchBooksButton();
-            Table table = new Table($(".v-grid-tablewrapper"));
-            if (title.equals(table.getCellValue(0, 0)));
-            return true;
-        } catch (NoSuchElementException e) {
-            return false;
-        }
-
-    }
+//
+//    public static Boolean confirmBookExist(String title) {
+//        try {
+//            page(MenuPage.class).navigateToBrowseBooks();
+//            BrowseBooksPage browseBooksPage = page(BrowseBooksPage.class);
+//            browseBooksPage.setTitleField(title);
+//            browseBooksPage.clickSearchBooksButton();
+//            Table table = new Table($(".v-grid-tablewrapper"));
+//            if (title.equals(table.getCellValue(0, 0)));
+//            return true;
+//        } catch (ElementNotVisibleException e) {
+//            return false;
+//        }
+//
+//    }
 }
