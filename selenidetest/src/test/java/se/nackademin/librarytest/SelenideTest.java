@@ -22,7 +22,7 @@ public class SelenideTest extends TestBase {
 
     public SelenideTest() {
     }
-    @Ignore
+
     @Test
     public void createNewBookTest() throws InterruptedException {
 
@@ -51,7 +51,7 @@ public class SelenideTest extends TestBase {
 
     
     }
-    @Ignore
+  
     @Test
     public void createNewAuthorTest() throws InterruptedException {
 
@@ -77,7 +77,7 @@ public class SelenideTest extends TestBase {
     AuthorHelper.deleteAuthor();
     
     }
-    @Ignore
+
     @Test
     public void createNewUserTest() {
         User newUser = UserHelper.createNewRandomUser();
