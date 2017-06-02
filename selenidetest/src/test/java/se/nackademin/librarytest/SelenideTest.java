@@ -22,7 +22,7 @@ public class SelenideTest extends TestBase {
 
     public SelenideTest() {
     }
-    
+    @Ignore
     @Test
     public void createNewBookTest() throws InterruptedException {
 
@@ -51,7 +51,7 @@ public class SelenideTest extends TestBase {
 
     
     }
-
+    @Ignore
     @Test
     public void createNewAuthorTest() throws InterruptedException {
 
@@ -77,7 +77,7 @@ public class SelenideTest extends TestBase {
     AuthorHelper.deleteAuthor();
     
     }
-
+    @Ignore
     @Test
     public void createNewUserTest() {
         User newUser = UserHelper.createNewRandomUser();
@@ -111,16 +111,21 @@ public class SelenideTest extends TestBase {
         User newUser = UserHelper.createNewSimpleRandomUser();
         UserHelper.logInAsUser(newUser.getDisplayName(), newUser.getPassword());
                 
-        String copiesBeforeBorrow = newBook.getCopiesAvailible();
+        int copiesBeforeBorrow = Integer.parseInt(newBook.getTotalNumberOfCopiesAvailible());
         String titleNewBook = newBook.getTitle();
         
         LoanHelper.borrowBook(titleNewBook);
         sleep(5000);
-        String copiesAfterBorrow = LoanHelper.copiesAvailible();
+        int copiesAfterBorrow = Integer.parseInt(LoanHelper.copiesAvailible());
         
-        assertNotEquals("not equals",copiesBeforeBorrow , copiesAfterBorrow);
+        assertEquals(" equals",copiesBeforeBorrow-1 , copiesAfterBorrow);
         
-        LoanHelper.returnBook(titleNewBook);    
+        LoanHelper.returnBook(titleNewBook);
+        sleep(2000);
+        
+        int copiesAfterReturn= Integer.parseInt(LoanHelper.copiesAvailible());
+        
+        assertEquals(" equals",copiesBeforeBorrow , copiesAfterReturn);
         
     }
      
