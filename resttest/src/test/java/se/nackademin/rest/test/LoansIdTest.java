@@ -55,6 +55,7 @@ public class LoansIdTest {
         
         LoanOperation loanOperation =new LoanOperation();
         loanOperation.postNewLoan();
+        loanOperation.postNewLoan();
         
         int id = new ResponseOperation().getResponse(BASE_URL).jsonPath().getInt("loans.loan[-1].id");
         

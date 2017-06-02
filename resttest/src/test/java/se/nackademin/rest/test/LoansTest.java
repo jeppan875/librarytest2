@@ -70,37 +70,37 @@ public class LoansTest {
         assertEquals("should return status code 201",201, postResponse.getStatusCode());  
         
     }
-    @Ignore 
-    @Test
-    public void testUpdateLoan(){
-        
-        LoanOperation loanOperation =new LoanOperation();
-        loanOperation.postNewLoan();
-
-        String userUrl = "http://localhost:8080/librarytest-rest/users";    
-        int userId = new ResponseOperation().getResponse(userUrl).jsonPath().getInt("users.user[-1].id");        
-
-        UserOperation userOperation = new UserOperation();
-        userOperation.getUser(userId).setDisplayName("nisse");
-        User user = userOperation.getUser(userId);
-        Container Usercontainer = new Container(user);
-                 
-        Response putResponse = new ResponseOperation().putResponse(userUrl, Usercontainer);
-        assertEquals("should return status code 200",200, putResponse.getStatusCode());
-        
-        int loanId = new ResponseOperation().getResponse(BASE_URL).jsonPath().getInt("loans.loan[-1].id");  
-        
-        Loan loan = loanOperation.getLoan(loanId);;
+ 
+//    @Test
+//    public void testUpdateLoan(){
+//        
+//        LoanOperation loanOperation =new LoanOperation();
+//        loanOperation.postNewLoan();
+//
+//        String userUrl = "http://localhost:8080/librarytest-rest/users";    
+//        int userId = new ResponseOperation().getResponse(userUrl).jsonPath().getInt("users.user[-1].id");        
+//
+//        UserOperation userOperation = new UserOperation();
+//        userOperation.getUser(userId).setDisplayName("nisse");
+//        User user = userOperation.getUser(userId);
+//        Container Usercontainer = new Container(user);
+//                 
+//        Response putResponse = new ResponseOperation().putResponse(userUrl, Usercontainer);
+//        assertEquals("should return status code 200",200, putResponse.getStatusCode());
+//        
+//        int loanId = new ResponseOperation().getResponse(BASE_URL).jsonPath().getInt("loans.loan[-1].id");  
+//        
+//        Loan loan = loanOperation.getLoan(loanId);;
 //        loan.setUser(userId);
-        Container container = new Container(loan);
-                 
-        Response response = new ResponseOperation().putResponse(BASE_URL, container);
-        assertEquals("should return status code 200",200, response.getStatusCode());
+//        Container container = new Container(loan);
+//                 
+//        Response response = new ResponseOperation().putResponse(BASE_URL, container);
+//        assertEquals("should return status code 200",200, response.getStatusCode());
 //        assertNotEquals(dateBefore,new ResponseOperation().getResponse(BASE_URL).jsonPath().getString("loans.loan.user[-1].dateDue"));
-
+//
 //        container.getLoan().setId(new ResponseOperation().getResponse(BASE_URL).jsonPath().getInt("loans.loan[-1].id")+1);
 //        Response putAuthorNotFoundResponse = new ResponseOperation().putResponse(BASE_URL, container);
 //        assertEquals("should return status code 404",404, putAuthorNotFoundResponse.getStatusCode());
-    
-    }    
+//    
+//    }    
 }

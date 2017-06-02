@@ -70,7 +70,7 @@ public class BooksIdAuthorsTest {
 //        String postAuthorUrl = "http://localhost:8080/librarytest/rest/authors/";        
 //        
 //        BookOperation bookOperation = new BookOperation();
-//        SingleBook singleBook = new SingleBook(bookOperation.createRandomAuthor());
+//        Container singleBook = new SingleBook(bookOperation.createRandomAuthor());
 //                
 //        Response postResponse = new ResponseOperation().postResponse(postAuthorUrl, singleBook);
 //        assertEquals("should return status code 201",201, postResponse.getStatusCode());
